@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Interactive Quiz</title>
+  <style>
+    body {
+        font-family: Arial, sans-serif;
+        background-color: rgb(213, 216, 217);
+        display: block;
+        background-image: url(imt.png);
+        background-size: cover;
+        background-position: center;
+        height: 100vh;
+      }
+      
+      #quiz {
+        max-width: 500px;
+        margin: 0 auto;
+        padding: 20px;
+        background-color: #dca6de;
+        border-radius: 5px;
+        box-shadow: 0 0 10px rgba(21, 230, 112, 0.2);
+      }
+      
+      h1 {
+        text-align: center;
+        color: #333333;
+      }
+      
+      #question {
+        margin-bottom: 20px;
+      }
+      
+      #options {
+        display: grid;
+        gap: 10px;
+        grid-template-columns: repeat(2, 1fr);
+      }
+      
+      button {
+        display: block;
+        margin: 0 auto;
+        padding: 10px 20px;
+        background-color: rgb(227, 238, 10), 245, 161);
+        color: #131313;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+      }
+      
+      button:hover {
+        background-color: #5dbee1;
+      }
+  </style>
+</head>
+<body>
+  <div id="quiz">
+    <h1>Interactive Quiz</h1>
+    <div id="question"></div>
+    <div id="options"></div>
+    <button id="submit">Submit</button>
+  </div>
+
+  <script src="index.js"></script>
+</body>
+</html>

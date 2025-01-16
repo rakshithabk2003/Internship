@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<head>
+	<link rel="stylesheet" href="style2.css">
+	<link rel="stylesheet" href=
+"https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+	<link rel="stylesheet" href=
+"https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+	<link rel="stylesheet" href=
+"https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap">
+	<title>Weather App</title>
+    <style>
+        body {
+            margin: 0;
+            font-family:cursive;
+            background-image: url(Weather-App-Icons-2.jpg);
+            background-size: cover;
+            background-position: center;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+       
+        }
+        
+        .container {
+            text-align: center;
+        }
+        
+        .weather-card {
+            background-color: whitesmoke;
+            border-radius: 20px;
+            padding: 20px;
+            box-shadow: 0 0 30px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease-in-out;
+            width: 450px;
+        }
+        
+        .weather-card:hover {
+            transform: scale(1.05);
+        }
+        
+        #city-input {
+            padding: 15px;
+            margin: 10px 0;
+            width: 70%;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+        
+        #city-input:focus {
+            outline: none;
+            border-color: #2196F3;
+        }
+        
+        #city-input::placeholder {
+            color: #aaa;
+        }
+        
+        #city-input-btn {
+            padding: 10px;
+            background-color: #2196F3;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+        
+        #city-input-btn:hover {
+            background-color: #1565C0;
+        }
+        
+        #weather-info {
+            display: none;
+        }
+        
+        #weather-icon {
+            width: 100px;
+            height: 100px;
+        }
+        
+        #temperature {
+            font-size: 24px;
+            font-weight: bold;
+            margin: 8px 0;
+        }
+        
+        #description {
+            font-size: 18px;
+            margin-bottom: 10px;
+        }
+        
+        #wind-speed {
+            font-size: 16px;
+            color: rgb(223, 39, 35);
+        }
+        
+        #date {
+            font-size: 14px;
+            color: rgb(59, 157, 136);
+        }
+    </style>
+</head>
+
+<body>
+	<div class="container">
+		<div class="weather-card">
+			
+			<h3>
+				Weather App
+			</h3>
+			<input type="text" id="city-input"
+				placeholder="Enter city name">
+			<button id="city-input-btn"
+					onclick="weatherFn($('#city-input').val())">
+					Get Weather
+			</button>
+			<div id="weather-info"
+				class="animate__animated animate__fadeIn">
+				<h3 id="city-name"></h3>
+				<p id="date"></p>
+				
+				<p id="temperature"></p>
+				<p id="description"></p>
+				<p id="wind-speed"></p>
+			</div>
+		</div>
+	</div>
+	<script src=
+"https://code.jquery.com/jquery-3.6.0.min.js">
+	</script>
+	<script src=
+"https://momentjs.com/downloads/moment.min.js">
+	</script>
+	<script src="script2.js"></script>
+</body>
+
+</html>

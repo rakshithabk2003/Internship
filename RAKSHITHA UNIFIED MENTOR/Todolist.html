@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>To-Do List</title>
+  <link rel="stylesheet" href="styles.css">
+  <img src="images.jpg">
+  
+  <style>
+    body {
+        font-family: Arial, sans-serif;
+        background-color:rgb(189, 170, 215);
+        margin: 0;
+        padding: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+      }
+      
+      .todo-container {
+        background: #c4c6e0;
+        padding: 20px 30px;
+        border-radius: 10px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        width: 100%;
+        max-width: 400px;
+        text-align: center;
+      }
+      
+      h1 {
+        margin-bottom: 20px;
+        color: #333;
+      }
+      
+      #todo-form {
+        display: flex;
+        gap: 10px;
+        margin-bottom: 20px;
+      }
+      
+      #todo-input {
+        flex: 1;
+        padding: 10px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+      }
+      
+      button {
+        padding: 10px 15px;
+        border: none;
+        background-color: #01070d;
+        color: #fff;
+        border-radius: 5px;
+        cursor: pointer;
+      }
+      
+      button:hover {
+        background-color: #0056b3;
+      }
+      
+      #todo-list {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+      }
+      
+      .todo-item {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background: #f9f9f9;
+        padding: 10px 15px;
+        border: 1px solid #ddd;
+        border-radius: 5px;
+        margin-bottom: 10px;
+      }
+      
+      .todo-item.completed span {
+        text-decoration: line-through;
+        color: #888;
+      }
+      
+      .todo-actions button {
+        margin-left: 10px;
+        padding: 5px 10px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+      }
+      
+      .todo-actions .complete-btn {
+        background-color: #28a745;
+        color: #fff;
+      }
+      
+      .todo-actions .delete-btn {
+        background-color: #dc3545;
+        color: #fff;
+      }
+  </style>
+</head>
+<body>
+  <div class="todo-container">
+    <h1>To-Do List</h1>
+    <form id="todo-form">
+      <input type="text" id="todo-input" placeholder="Enter a new task..." required />
+      <button type="submit">Add Task</button>
+    </form>
+    <ul id="todo-list"></ul>
+  </div>
+  <script src="script1.js"></script>
+</body>
+</html>

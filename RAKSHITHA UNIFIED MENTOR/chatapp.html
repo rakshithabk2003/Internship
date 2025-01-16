@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Chat App</title>
+  <style>
+    body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        background-color: #c3e9f0;
+      }
+      
+      .chat-container {
+        width: 400px;
+        background: white;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        border-radius: 10px;
+        overflow: hidden;
+        display: flex;
+        flex-direction: column;
+      }
+      
+      .chat-header {
+        background: #007bff;
+        color: white;
+        padding: 10px;
+        text-align: center;
+      }
+      
+      .chat-messages {
+        flex: 1;
+        padding: 10px;
+        overflow-y: auto;
+        background: #f9f9f9;
+      }
+      
+      .chat-messages .message {
+        margin-bottom: 10px;
+      }
+      
+      .chat-messages .message.user {
+        text-align: right;
+        color: blue;
+      }
+      
+      .chat-messages .message.bot {
+        text-align: left;
+        color: green;
+      }
+      
+      .chat-input {
+        display: flex;
+        padding: 10px;
+        background: #f0f0f0;
+      }
+      
+      .chat-input input {
+        flex: 1;
+        padding: 10px;
+        border: 1px solid #ddd;
+        border-radius: 5px;
+        margin-right: 10px;
+      }
+      
+      .chat-input button {
+        padding: 10px;
+        border: none;
+        background: #007bff;
+        color: white;
+        border-radius: 5px;
+        cursor: pointer;
+      }
+      
+      .chat-input button:hover {
+        background: #0056b3;
+      }
+  </style>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="chat-container">
+    <div class="chat-header">
+      <h2>Chat App</h2>
+    </div>
+    <div class="chat-messages" id="chatMessages"></div>
+    <div class="chat-input">
+      <input type="text" id="messageInput" placeholder="Type your message..." />
+      <button id="sendButton">Send</button>
+    </div>
+  </div>
+  <script src="script7.js"></script>
+</body>
+</html>
